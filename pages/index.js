@@ -1,7 +1,11 @@
 import Head from 'next/head'
+import React, { useEffect } from 'react'
+import useScroll from '../utils/useScroll.js'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const { scrollX, scrollY, scrollDirection } = useScroll();
+  console.log({ scrollX, scrollY, scrollDirection })
   return (
     <div className={styles.container}>
       <Head>
