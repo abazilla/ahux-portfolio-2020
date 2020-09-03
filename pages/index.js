@@ -10,7 +10,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <div className={styles.svgs}>
+          <img src="/room.svg" alt="Room" className={styles.homeRoom} />
+          <img src="/foreground.svg" alt="Foreground" className={styles.homeFg} /> {/* fg is to thhe right of mid, in front of bg */}
+          <img src="/mid.svg" alt="Mid" className={styles.homeMid} /> {/*mid is in front of the apartment bg */}
+          <img src="/background.svg" alt="Background" className={styles.homeBg} /> {/* bg is the apartment that room is in */}
+        </div>
+          {/* <img src="/Background.svg" alt="Vercel Logo" className={styles.logo} /> */}
+        {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
@@ -47,7 +54,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer className={styles.footer}>
@@ -56,8 +63,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Powered by Ligma &copy;
         </a>
       </footer>
     </div>

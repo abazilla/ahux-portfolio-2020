@@ -115,6 +115,43 @@
   height: 1em;
 }
 
+.svgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.svgs > img {
+  display: block;
+}
+
+.homeRoom {
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+}
+
+.homeFg {
+  height: 100vh;
+  position: absolute;
+  z-index: 9;
+}
+
+.homeMid {
+  height: 100vh;
+  position: absolute;
+  z-index: 7;
+}
+
+.homeBg {
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
