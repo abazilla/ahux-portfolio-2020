@@ -1,3 +1,7 @@
+
+## TODOS
+- Use [GSAP's ScrollTrigger](https://greensock.com/scrolltrigger/) to do [scrollTrigger / text animation](https://youtu.be/ygcEKd0RIGg?t=924) stuff
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
