@@ -1,24 +1,29 @@
 import Head from 'next/head'
 import React, { useEffect } from 'react'
 
-import useScroll from '../utils/useScroll.js'
 import styles from '../styles/Home.module.css'
 
-import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const { scrollX, scrollY, scrollDirection } = useScroll();
-  console.log({ scrollX, scrollY, scrollDirection })
   // ScrollMagic === ScrollTrigger
+  const tl = gsap.timeline()
+  // tl.from("#room", { scale: 5 })
+  
   ScrollTrigger.defaults({
     toggleActions: "restart pause resume none",
     markers: true,
   })
-  gsap.timeline()
-    // .to4004040
+
+  ScrollTrigger.create({
+    animation: tl,
+    trigger: ".container",
+    start: 300,
+    end: 600,
+  })
   return (
     <div className={styles.container}>
       <Head>
