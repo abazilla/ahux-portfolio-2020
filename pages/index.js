@@ -13,6 +13,12 @@ export default function Home() {
   const { scrollX, scrollY, scrollDirection } = useScroll();
   console.log({ scrollX, scrollY, scrollDirection })
   // ScrollMagic === ScrollTrigger
+  ScrollTrigger.defaults({
+    toggleActions: "restart pause resume none",
+    markers: true,
+  })
+  gsap.timeline()
+    // .to4004040
   return (
     <div className={styles.container}>
       <Head>
@@ -22,10 +28,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.svgs}>
+          {/* <img id="foreground" src="/foreground.svg" alt="Foreground" className={styles.homeFg} /> fg is to thhe right of mid, in front of bg */}
+          {/* <img id="mid" src="/mid.svg" alt="Mid" className={styles.homeMid} /> mid is in front of the apartment bg */}
+          {/* <img id="background" src="/background.svg" alt="Background" className={styles.homeBg} /> bg is the apartment that room is in */}
           <img id="room" src="/room.svg" alt="Room" className={styles.homeRoom} />
-          <img id="foreground" src="/foreground.svg" alt="Foreground" className={styles.homeFg} /> {/* fg is to thhe right of mid, in front of bg */}
-          <img id="mid" src="/mid.svg" alt="Mid" className={styles.homeMid} /> {/*mid is in front of the apartment bg */}
-          <img id="background" src="/background.svg" alt="Background" className={styles.homeBg} /> {/* bg is the apartment that room is in */}
         </div>
           {/* <img src="/Background.svg" alt="Vercel Logo" className={styles.logo} /> */}
         {/* <h1 className={styles.title}>
